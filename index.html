@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Our Lady Virgin of the Poor Church - Uppinangady</title>
+	<meta name="description"
+		content="Welcome to Our Lady Virgin of the Poor Church, Uppinangady. Find mass timings, parish events, daily bible readings, and contact details.">
+
+	<!-- Keywords -->
+	<meta name="keywords"
+		content="Uppinangady Church, Our Lady Virgin of the Poor, Mass Timings, Church Events, Parish, Bible Reading, Contact">
+
+	<!-- Favicon (Logo in URL bar) -->
+	<link rel="icon" type="image/png" href="/Assets/Images/logo1.jpg">
+
+	<!-- Open Graph (for Facebook, WhatsApp, LinkedIn) -->
+	<meta property="og:title" content="Our Lady Virgin of the Poor Church - Uppinangady">
+	<meta property="og:description"
+		content="Discover Mass timings, events, and services at Our Lady Virgin of the Poor Church, Uppinangady.">
+	<meta property="og:image" content="/Assets/Images/logo.png">
+	<meta property="og:url" content="https://yourdomain.com">
+	<meta property="og:type" content="website">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Our Lady Virgin of the Poor Church">
+	<meta name="twitter:description"
+		content="Discover Mass timings, events, and services at Our Lady Virgin of the Poor Church, Uppinangady.">
+	<meta name="twitter:image" content="/Assets/Images/logo1.jpg">
+
+	<!-- Schema Markup (Rich Snippets for Churches) -->
+	<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Our Lady Virgin of the Poor Church",
+    "image": "/Assets/Images/logo1.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Opp Uppinangady Govt P U Collage",
+      "addressLocality": "Uppinangady",
+      "addressRegion": "DK",
+      "postalCode": "574241",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-",
+    "url": ""
+  }
+  </script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+		integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="Assets/css/style.css">
+	<link rel="stylesheet" href="Assets/css/navbar.css">
+	<link rel="stylesheet" href="Assets/css/slider.css">
+	<link rel="stylesheet" href="Assets/css/clergy.css">
+	<link rel="stylesheet" href="Assets/css/parallax.css">
+	<link rel="stylesheet" href="Assets/css/liturgical.css">
+	<link rel="stylesheet" href="Assets/css/event.css">
+	<link rel="stylesheet" href="Assets/css/footer.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+	<style>
+		/* Loader Overlay */
+		.loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			z-index: 9999;
+		}
+
+		/* Circle spinner */
+		.spinner {
+			width: 120px;
+			height: 120px;
+			border: 8px solid #d1d5db;
+			border-top: 8px solid #EBCB90;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			animation: spin 1s linear infinite;
+			position: relative;
+		}
+
+		@keyframes spin {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		/* Logo in center */
+		.loader img {
+			position: absolute;
+			width: 110px;
+			opacity: 0;
+			transform: scale(0.5);
+		}
+
+		/* Curtain panels */
+		.curtain {
+			position: fixed;
+			top: 0;
+			width: 50%;
+			height: 100%;
+			background: #fff;
+			z-index: 9998;
+		}
+
+		.curtain.left {
+			left: 0;
+		}
+
+		.curtain.right {
+			right: 0;
+		}
+
+		/* Hide content initially */
+		body.loading .page-content {
+			visibility: hidden;
+		}
+	</style>
+</head>
+
+<body class="loading">
+
+	<!-- Loader (auto-inserted by JS if you want) -->
+	<div class="loader">
+		<div class="spinner"></div>
+		<img src="Assets/images/logo.png" alt="Church Logo">
+	</div>
+
+	<!-- Full Page Content -->
+	<div class="page-content">
+
+		<!-- Reusable Navbar -->
+		<div id="navbar-container"></div>
+
+		<!-- Image Slider -->
+		<div class="content reveal-bottom">
+			<div class="images">
+				<img src="Assets/images/image1.png">
+				<img src="Assets/images/image2.png">
+				<img src="Assets/images/image3.png">
+				<img src="Assets/images/image4.png">
+			</div>
+
+			<!-- Static Overlay Text -->
+			<div class="carousel-text">
+				<h1 style="color:#EBCB90">OUR LADY VIRGIN OF THE POOR CHURCH UPPINANGADY</h1>
+				<p>OPP UPPINANGADY GOVT P U COLLAGE</p>
+				<p>UPPINANGADY VILLAGE AND POST PUTTUR TALUK DK-574241</p>
+				<p>CONTACT NO: 8277939419</p>
+			</div>
+
+			<!-- Arrows -->
+			<div class="sliders left" onclick="side_slide(-1)">
+				<span class="fas fa-angle-left"></span>
+			</div>
+			<div class="sliders right" onclick="side_slide(1)">
+				<span class="fas fa-angle-right"></span>
+			</div>
+		</div>
+
+		<!-- Parish Clergy Section -->
+		<section class="clergy-section">
+			<h2 class="clergy-title">Parish Clergy</h2>
+			<div class="clergy-line"></div>
+
+			<div class="clergy-container">
+				<div class="clergy-card">
+					<div class="clergy-img">
+						<img src="Assets/images/parish.png" alt="Fr Bonaventure Nazareth">
+					</div>
+					<h3>Fr Bonaventure Nazareth</h3>
+					<p>Parish Priest</p>
+				</div>
+
+				<div class="clergy-card">
+					<div class="clergy-img">
+						<img src="Assets/images/parish1.png" alt="Fr Avith Pais">
+					</div>
+					<h3>Fr Avith Pais</h3>
+				</div>
+
+				<div class="clergy-card">
+					<div class="clergy-img">
+						<img src="Assets/images/parish2.png" alt="Fr Alwyn Serrao">
+					</div>
+					<h3>Fr Alwyn Serrao</h3>
+				</div>
+			</div>
+		</section>
+
+		<!-- ✅ Parallax About Us Section -->
+		<section class="parallax" id="aboutus">
+			<div class="parallax-content">
+				<h1 class="reveal-top">About Us</h1>
+				<p class="reveal-bottom">Founded in 1928, Our Lady Virgin of the Poor Church has been a symbol of faith,
+					unity,
+					and service for
+					generations.</p>
+				<a href="aboutus.html" class="button reveal-bottom">
+					<span class="text">Know More</span>
+					<span class="arrow">
+						<svg class="arrow" viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z">
+							</path>
+						</svg>
+					</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- Liturgical Section -->
+		<section class="liturgical-section" id="masstiming">
+			<h2 class="section-title reveal-top">LITURGICAL SERVICES</h2>
+			<div class="liturgical-container">
+				<!-- Left: Parallax Image -->
+				<div class="image-container reveal-left" id="parallax-img">
+					<img src="Assets/Images/image5.png" alt="Church Image">
+				</div>
+				<!-- Right: Service Info -->
+				<div class="services-card ">
+					<h3>Mass Timings</h3>
+					<ul>
+						<li><strong>All Masses in Konkani</strong></li>
+						<li><strong>Sunday:</strong>
+							<ul>
+								<li>7:30 AM – First Mass</li>
+								<li>8:30 AM – Catechism Classes</li>
+								<li>9:30 AM – Second Mass</li>
+							</ul>
+						</li>
+						<li><strong>Daily Mass:</strong> 7:00 AM</li>
+						<li><strong>Every Friday:</strong> 9:00 AM</li>
+						<li><strong>Every Month 1st Saturday:</strong> 5:00 PM</li>
+						<li><strong>Every Month 1st Sunday:</strong> 7:30 AM (Only one Mass)</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Events Section -->
+		<section class="events-preview" id="events">
+			<h2 class="event-title">Church Events</h2>
+			<div class="events-grid">
+				<!-- Event 1 -->
+				<div class="event-card reveal-left">
+					<div class="event-image">
+						<img src="Assets/Images/Events/event1.png" alt="New Parish Priest">
+					</div>
+					<div class="event-content">
+						<h3>Welcome of the New Parish Priest</h3>
+						<p>On May 19, 2024, Rev. Fr Gerald Dsouza officially took charge as the Parish Priest of our
+							church.</p>
+						<a href="component/event1.html" class="more-btn">Know More</a>
+					</div>
+				</div>
+
+				<!-- Event 2 -->
+				<div class="event-card reveal-bottom">
+					<div class="event-image">
+						<img src="Assets/Images/Events/event2(4).png" alt="Yuva Sangam">
+					</div>
+					<div class="event-content">
+						<h3>Yuva Sangam – 2025</h3>
+						<p>A vibrant and spirit-filled youth meet organized by ICYM Uppinangady Unit on July 20, 2025.
+						</p>
+						<a href="component/event2.html" class="more-btn">Know More</a>
+					</div>
+				</div>
+
+				<!-- Event 3 -->
+				<div class="event-card reveal-right">
+					<div class="event-image">
+						<img src="Assets/Images/Events/event3.jpg" alt="KRYC Cross">
+					</div>
+					<div class="event-content">
+						<h3>KRYC Cross Journey</h3>
+						<p>On July 23, 2025, the parish hosted a meaningful event receiving the KRYC Cross from Vittla
+							Deanery.</p>
+						<a href="component/event3.html" class="more-btn">Know More</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div id="footer-container"></div>
+	</div>
+
+	<!-- Loader Script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script>
+		function runLoader() {
+			const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+			// Loader logo entrance
+			tl.to(".loader img", { duration: 1, scale: 1, opacity: 1 })
+				.to(".loader", { duration: 0.8, opacity: 0, pointerEvents: "none", delay: 0.5 })
+				.call(() => {
+					document.querySelector(".loader").remove();
+					document.body.classList.remove("loading");
+				})
+
+				// Curtain reveal effect
+				.to(".curtain.left", { x: "-100%", duration: 1 }, "-=0.2")
+				.to(".curtain.right", { x: "100%", duration: 1 }, "<")
+				.call(() => {
+					document.querySelectorAll(".curtain").forEach(el => el.remove());
+				});
+		}
+
+		window.addEventListener("load", runLoader);
+	</script>
+
+	<!-- Load Navbar + Footer -->
+	<script>
+		fetch("component/navbar.html")
+			.then(res => res.text())
+			.then(html => {
+				document.getElementById("navbar-container").innerHTML = html;
+
+				const script = document.createElement("script");
+				script.src = "Assets/js/navbar.js";
+				script.onload = () => {
+					window.initNavbar();
+				};
+				document.body.appendChild(script);
+			});
+
+		fetch("component/footer.html")
+			.then(res => res.text())
+			.then(html => {
+				document.getElementById("footer-container").innerHTML = html;
+			});
+	</script>
+
+	<!-- Other Scripts -->
+	<script src="Assets/js/slider.js"></script>
+	<script src="Assets/js/clergy.js"></script>
+	<script src="Assets/js/parallax.js"></script>
+	<script src="Assets/js/liturgical.js"></script>
+	<script src="Assets/js/script.js"></script>
+
+</body>
+
+</html>

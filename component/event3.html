@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRYC Cross Journey</title>
+    <link rel="stylesheet" href="../Assets/css/event.css">
+    <link rel="stylesheet" href="../Assets/css/navbar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+    <style>
+        /* Loader Overlay */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        /* Circle spinner */
+        .spinner {
+            width: 120px;
+            height: 120px;
+            border: 8px solid #d1d5db;
+            border-top: 8px solid #EBCB90;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: spin 1s linear infinite;
+            position: relative;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Logo in center */
+        .loader img {
+            position: absolute;
+            width: 110px;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        /* Curtain panels */
+        .curtain {
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: #fff;
+            z-index: 9998;
+        }
+
+        .curtain.left {
+            left: 0;
+        }
+
+        .curtain.right {
+            right: 0;
+        }
+
+        /* Hide content initially */
+        body.loading .page-content {
+            visibility: hidden;
+        }
+
+        /* 🎉 EVENT GRID GALLERY */
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            /* flexible grid */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* keep aspect fill */
+            display: block;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Custom sizing for first 4 items */
+        .grid-item:nth-child(1) {
+            grid-column: span 2;
+            /* wider */
+        }
+
+        .grid-item:nth-child(2) {
+            grid-row: span 1;
+            /* taller */
+        }
+
+        .grid-item:nth-child(3) {
+            grid-row: span 2;
+            /* wider */
+        }
+
+        .grid-item:nth-child(4) {
+            grid-column: span 2;
+            /* taller */
+        }
+    </style>
+</head>
+
+<body class="loading">
+
+    <!-- Loader (auto-inserted by JS if you want) -->
+    <div class="loader">
+        <div class="spinner"></div>
+        <img src="../Assets/images/logo.png" alt="Church Logo">
+    </div>
+
+    <!-- Full Page Content -->
+    <div class="page-content">
+
+        <div id="navbar-container"></div>
+
+        <section class="event-details">
+            <h2>KRYC Cross Journey</h2>
+            <div class="grid-gallery">
+                <div class="grid-item"><img src="../Assets/Images/Events/event3.jpg" alt="Event 1"></div>
+                <div class="grid-item"><img src="../Assets/Images/Events/event3(1).png" alt="Event 2"></div>
+                <div class="grid-item"><img src="../Assets/Images/Events/event3(2).jpg" alt="Event 3"></div>
+                <div class="grid-item"><img src="../Assets/Images/Events/event3(3).jpg" alt="Event 4"></div>
+            </div>
+
+            <div class="event-details">
+                <p><strong>Date:</strong> 29-Jul-2025 3:35:21:pm</p>
+                <p><strong>Hits:</strong> 105</p>
+
+                <p>
+                    On July 23, 2025, Our Lady Virgin of the Poor Church in Uppinangady hosted a significant event,
+                    receiving the <b>KRYC Cross</b> from the Vittla Deanery. This meaningful procession, which commenced
+                    at
+                    5:30 PM, was officiated by Fr. Sunil Pinto and Rev. Fr. Jerald Dsouza. They were joined by members
+                    of
+                    the ICYM and several parishioners. Vishal Pinto, the ICYM President, led the introductory prayer.
+                </p>
+
+                <p>
+                    The KRYC Cross was then formally transferred to the Puttur Unit on July 25, 2025, at 5:30 PM. Rev.
+                    Fr.
+                    Jerald Dsouza and various ICYM members were present for this solemn handover.
+                </p>
+
+
+                <a href="https://www.icymmangalore.com/news/deanery-news/puttur-deanery/deanery-news/402-parish-news/415-uppinangady"
+                    class="more-btn">Read Full Article</a>
+            </div>
+
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        function runLoader() {
+            const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+            // Loader logo entrance
+            tl.to(".loader img", { duration: 1, scale: 1, opacity: 1 })
+                .to(".loader", { duration: 0.8, opacity: 0, pointerEvents: "none", delay: 0.5 })
+                .call(() => {
+                    document.querySelector(".loader").remove();
+                    document.body.classList.remove("loading");
+                })
+
+                // Curtain reveal effect
+                .to(".curtain.left", { x: "-100%", duration: 1 }, "-=0.2")
+                .to(".curtain.right", { x: "100%", duration: 1 }, "<")
+                .call(() => {
+                    document.querySelectorAll(".curtain").forEach(el => el.remove());
+                });
+        }
+
+        window.addEventListener("load", runLoader);
+    </script>
+    <script>
+        fetch("../component/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar-container").innerHTML = html;
+
+                const script = document.createElement("script");
+                script.src = "../Assets/js/navbar.js";
+                script.onload = () => {
+                    window.initNavbar();
+                };
+                document.body.appendChild(script);
+            });
+    </script>
+
+</body>
+
+</html>

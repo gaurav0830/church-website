@@ -1,0 +1,15 @@
+/* Global Styles */
+* {
+  font-family: "Major Mono Display", monospace;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #E8D4B7;
+  color: white;
+}

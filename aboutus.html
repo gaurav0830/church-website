@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Our Lady Virgin of the Poor Church Uppinangady</title>
+    <link rel="stylesheet" href="Assets/css/history.css">
+    <link rel="stylesheet" href="Assets/css/navbar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+    <style>
+        /* Loader Overlay */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        /* Circle spinner */
+        .spinner {
+            width: 120px;
+            height: 120px;
+            border: 8px solid #d1d5db;
+            border-top: 8px solid #EBCB90;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: spin 1s linear infinite;
+            position: relative;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Logo in center */
+        .loader img {
+            position: absolute;
+            width: 110px;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        /* Curtain panels */
+        .curtain {
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: #fff;
+            z-index: 9998;
+        }
+
+        .curtain.left {
+            left: 0;
+        }
+
+        .curtain.right {
+            right: 0;
+        }
+
+        /* Hide content initially */
+        body.loading .page-content {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body class="loading">
+
+    <!-- Loader (auto-inserted by JS if you want) -->
+    <div class="loader">
+        <div class="spinner"></div>
+        <img src="Assets/images/logo.png" alt="Church Logo">
+    </div>
+
+    <!-- Full Page Content -->
+    <div class="page-content">
+
+        <!-- Navbar Placeholder -->
+        <div id="navbar-container"></div>
+
+        <!-- Parallax Hero -->
+        <div class="parallax">
+            <div class="parallax-content">
+                <h1>Our History</h1>
+                <p>From 1928 to Present</p>
+            </div>
+        </div>
+
+        <section>
+            <h2>History of Our Lady Virgin of the Poor Church</h2>
+
+            <!-- Section 1 -->
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <span>Foundation and Early Growth (1928 – 1932)</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="collapsible-content">
+                    <p>
+                        The town of Uppinangady, beautifully situated at the confluence of the Netravati and Kumaradhara
+                        rivers,
+                        became home to a Catholic community nearly a century ago. With great enthusiasm, a priest from
+                        Kokkada,
+                        together with Fr. Rozario Sequeira, the missionary priest of Kokkada and Uppinangady, worked for
+                        the
+                        spiritual needs of the people. Their efforts bore fruit on <b>23rd May 1928</b>, when a new
+                        church was blessed
+                        and inaugurated by the bishop and was dedicated to St. Philomena.
+                    </p>
+                    <ul>
+                        <li>17th July 1928 – A cemetery was built beside the church.</li>
+                        <li>9th January 1929 – A church bell was installed.</li>
+                        <li>31st May 1931 – Parish priest’s residence completed.</li>
+                        <li>30th July 1931 – A student orphanage was built for school children.</li>
+                    </ul>
+                    <p>
+                        In 1931, the Bethany Sisters established Lourdes Convent to support education. On <b>1st January
+                            1932</b>,
+                        Uppinangady Church was officially declared an independent parish, and on 8th February 1932, it
+                        was included in
+                        the Mangalore Diocese Parish Union.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <span>Expansion of Wards and Parishes (1935 – 1991)</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="collapsible-content">
+                    <p>
+                        Alongside parish growth, education flourished with primary schools at Alimara, Kemmara, and
+                        Uppinangady (the
+                        latter still continues). With bridges connecting regions, more areas were added to the parish:
+                    </p>
+                    <ul>
+                        <li>1935 – Kumaradhara River Bridge eased travel.</li>
+                        <li>1937 – Biliyoor ward (Nekkilady, Bollur, Biliyoor) added.</li>
+                        <li>1955 – After Nethravati Bridge, Karaya, Bannengala, Barya, and Saralikatte were included.
+                        </li>
+                        <li>1946 – Uppinangady Ward created (parish had only Valal and Biliyoor before).</li>
+                        <li>1957 – Hosamata Bridge shifted Kuntoor, Balya, Perabe to Kadaba Parish.</li>
+                        <li>1985 – Nekkilady Ward created.</li>
+                        <li>1991 – Barya Ward (St. Lawrence) and Ramakunja Ward (Infant Jesus) created.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <span>Renaming and Devotion (1962 – 2000)</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="collapsible-content">
+                    <p>
+                        From the beginning, the faithful had a deep devotion to St. Philomena. Since she was not
+                        officially recognized
+                        as a saint, the church was renamed <b>Our Lady Virgin of the Poor Church</b> on <b>14th April
+                            1962</b>.
+                    </p>
+                    <p>
+                        In 1992, the parish revived the annual St. Philomena Feast. Education and cemetery expansions
+                        marked this era:
+                    </p>
+                    <ul>
+                        <li>1995 – 1.5 acres at Ninnikel allotted for a new cemetery (Valal, Ninnikel, Bannengala,
+                            Nekkilady blessed
+                            on 20th Dec 1995).</li>
+                        <li>2000 – Construction of a new school began.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <span>Modern Developments (2004 – 2023)</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="collapsible-content">
+                    <ul>
+                        <li>2004 – St. Mary’s School established (expanded in 2015, 2017, with a school hall in 5th
+                            floor).</li>
+                        <li>2004 – Valal, Ninnikel, Bannengala, Nekkilady cemeteries completed.</li>
+                        <li>2005 – New residence for parish priest inaugurated; 3 rental houses built near convent.</li>
+                        <li>2009 – Catholic Multipurpose Society founded.</li>
+                        <li>2010 – Bellipady Ward created; Mrs. Miliyan Crasta donated 12 cents of land and a house.
+                        </li>
+                        <li>2018 – Ninnikel Cemetery completed; automatic church bell installed.</li>
+                        <li>2019 – New borewell dug near St. Mary’s English Medium School.</li>
+                        <li>2020 – New church building and bell inaugurated on 26th March.</li>
+                        <li>2022 – LED façade lights installed on the church.</li>
+                        <li>2023 – Fire & safety system and 25,000-litre underground water tank added.</li>
+                    </ul>
+                    <p>
+                        Over the years, major renovations and expansions were undertaken in cemeteries, schools,
+                        convent, priest’s
+                        residence, and parish infrastructure. New furniture, amplifiers, sound systems, and other
+                        facilities were added
+                        through generous parishioner support.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        function runLoader() {
+            const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+            // Loader logo entrance
+            tl.to(".loader img", { duration: 1, scale: 1, opacity: 1 })
+                .to(".loader", { duration: 0.8, opacity: 0, pointerEvents: "none", delay: 0.5 })
+                .call(() => {
+                    document.querySelector(".loader").remove();
+                    document.body.classList.remove("loading");
+                })
+
+                // Curtain reveal effect
+                .to(".curtain.left", { x: "-100%", duration: 1 }, "-=0.2")
+                .to(".curtain.right", { x: "100%", duration: 1 }, "<")
+                .call(() => {
+                    document.querySelectorAll(".curtain").forEach(el => el.remove());
+                });
+        }
+
+        window.addEventListener("load", runLoader);
+    </script>
+
+    <script>
+        // Accordion toggle
+        document.querySelectorAll(".collapsible-header").forEach(header => {
+            header.addEventListener("click", () => {
+                const parent = header.parentElement;
+                parent.classList.toggle("active");
+            });
+        });
+
+        // Load navbar
+        fetch("component/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar-container").innerHTML = html;
+
+                const script = document.createElement("script");
+                script.src = "Assets/js/navbar.js";
+                script.onload = () => {
+                    window.initNavbar();
+                };
+                document.body.appendChild(script);
+            });
+    </script>
+
+</body>
+
+</html>

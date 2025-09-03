@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Our Lady Virgin of the Poor Church Uppinangady</title>
+    <link rel="stylesheet" href="Assets/css/history.css">
+    <link rel="stylesheet" href="Assets/css/navbar.css">
+    <link rel="stylesheet" href="Assets/css/contact.css">
+    <link rel="stylesheet" href="Assets/css/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+	<style>
+	/* Loader Overlay */
+	.loader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: 9999;
+	}
+
+	/* Circle spinner */
+	.spinner {
+		width: 120px;
+		height: 120px;
+		border: 8px solid #d1d5db;
+		border-top: 8px solid #EBCB90;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation: spin 1s linear infinite;
+		position: relative;
+	}
+
+	@keyframes spin {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	/* Logo in center */
+	.loader img {
+		position: absolute;
+		width: 110px;
+		opacity: 0;
+		transform: scale(0.5);
+	}
+
+	/* Curtain panels */
+	.curtain {
+		position: fixed;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		background: #fff;
+		z-index: 9998;
+	}
+	.curtain.left {
+		left: 0;
+	}
+	.curtain.right {
+		right: 0;
+	}
+
+	/* Hide content initially */
+	body.loading .page-content {
+		visibility: hidden;
+	}
+</style>
+</head>
+
+<body class="loading">
+
+	<!-- Loader (auto-inserted by JS if you want) -->
+	<div class="loader">
+		<div class="spinner"></div>
+		<img src="Assets/images/logo.png" alt="Church Logo">
+	</div>
+
+	<!-- Full Page Content -->
+	<div class="page-content">
+
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-container"></div>
+
+    <div class="parallax">
+        <div class="parallax-content">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you. Get in touch!</p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Get In Touch</h2>
+                <p class="note">Fields marked with an <span style="color: red;">*</span> are required</p>
+                <form id="contactForm" novalidate>
+                    <div class="wrapper">
+                        <div class="email">
+                            <input type="text" placeholder="Name *" class="email--input" required>
+                        </div>
+                        <p class="error">Name is required!</p>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="email">
+                            <input type="tel" placeholder="Phone" class="email--input" pattern="^[0-9]{10}$">
+                        </div>
+                        <p class="error">Enter a valid 10-digit phone number!</p>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="email">
+                            <input type="email" placeholder="Email *" class="email--input" required>
+                        </div>
+                        <p class="error">Email is invalid!</p>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="email">
+                            <textarea placeholder="Message *" class="email--input" required></textarea>
+                        </div>
+                        <p class="error">Message is required!</p>
+                    </div>
+
+                    <button type="submit">Submit <span>→</span></button>
+                </form>
+
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-container">
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Contact Info</h2>
+                    <p><strong>Address</strong><br>
+                        Our Lady Virgin of the Poor Church<br>
+                        Opp. Uppinangady Govt PU College<br>
+                        Uppinangady Village, Puttur Taluk, DK-574241
+                    </p>
+                    <p><strong>Email Us</strong><br>
+                        <a href="mailto:example@gmail.com">example@gmail.com</a><br>
+                    </p>
+                    <p><strong>Call Us</strong><br>
+                        <a href="tel:">+91 </a>
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.351219792534!2d75.25388407454454!3d12.835862117840755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4beaf01ca08df%3A0x762170a2e9906eec!2sOur%20Lady%20Virgin%20of%20the%20Poor%20Church!5e1!3m2!1sen!2sin!4v1756832787311!5m2!1sen!2sin"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+    </section>
+
+    <div id="footer-container"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script>
+		function runLoader() {
+			const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+			// Loader logo entrance
+			tl.to(".loader img", { duration: 1, scale: 1, opacity: 1 })
+				.to(".loader", { duration: 0.8, opacity: 0, pointerEvents: "none", delay: 0.5 })
+				.call(() => {
+					document.querySelector(".loader").remove();
+					document.body.classList.remove("loading");
+				})
+
+				// Curtain reveal effect
+				.to(".curtain.left", { x: "-100%", duration: 1 }, "-=0.2")
+				.to(".curtain.right", { x: "100%", duration: 1 }, "<")
+				.call(() => {
+					document.querySelectorAll(".curtain").forEach(el => el.remove());
+				});
+		}
+
+		window.addEventListener("load", runLoader);
+	</script>
+
+    <script>
+
+        // Load navbar
+        fetch("component/navbar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("navbar-container").innerHTML = html;
+
+                const script = document.createElement("script");
+                script.src = "Assets/js/navbar.js";
+                script.onload = () => {
+                    window.initNavbar();
+                };
+                document.body.appendChild(script);
+            });
+        fetch("component/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-container").innerHTML = html;
+            });
+    </script>
+    <script src="/Assets/js/validation.js"></script>
+
+</body>
+
+</html>

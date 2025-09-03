@@ -1,0 +1,75 @@
+.footer {
+  background: #2c2c2c;
+  color: #ddd;
+  padding: 3rem 2rem 1.5rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer a {
+  color: #EBCB90; /* church accent color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #EBCB90;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.footer-column p,
+.footer-column ul {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-bottom span {
+  color: #EBCB90;
+  font-weight: bold;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #EBCB90;
+}

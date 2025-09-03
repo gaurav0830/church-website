@@ -1,0 +1,159 @@
+/* 🎉 EVENTS PREVIEW PAGE */
+.events-preview {
+  background-color: #EBCB90;
+  padding: 60px 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.event-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 40px 0;
+  color: #333;
+  position: relative;
+}
+
+.event-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #004080;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid for Events Preview */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+/* Event Card */
+.event-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.event-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.1);
+}
+
+.event-content {
+  padding: 20px;
+}
+
+.event-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.event-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Button */
+.more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #004080;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background: #002850;
+}
+
+
+.event-details h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004080;
+  position: relative;
+}
+
+.event-details h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #004080;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+
+.event-details p {
+  margin-bottom: 15px;
+}
+
+.event-details ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.event-details ul li {
+  margin-bottom: 8px;
+}
+/* 🎉 EVENT DETAILS PAGE */
+.event-details {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.event-details h2 {
+  font-size: 2rem;
+  margin-top: 40px;   /* ✅ added space at top */
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+
+.event-detail-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.event-details p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
