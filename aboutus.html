@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Assets/Images/logo2.png">
     <title>History - Our Lady Virgin of the Poor Church Uppinangady</title>
     <link rel="stylesheet" href="Assets/css/history.css">
     <link rel="stylesheet" href="Assets/css/navbar.css">
+    <link rel="stylesheet" href="Assets/css/footer.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
 
     <style>
+        body {
+            background-color: white;
+        }
+
         /* Loader Overlay */
         .loader {
             position: fixed;
@@ -82,7 +88,7 @@
 
 <body class="loading">
 
-    <!-- Loader (auto-inserted by JS if you want) -->
+    <!-- Loader -->
     <div class="loader">
         <div class="spinner"></div>
         <img src="Assets/images/logo.png" alt="Church Logo">
@@ -202,14 +208,12 @@
                             floor).</li>
                         <li>2004 – Valal, Ninnikel, Bannengala, Nekkilady cemeteries completed.</li>
                         <li>2005 – New residence for parish priest inaugurated; 3 rental houses built near convent.</li>
-                        <li>2009 – Catholic Multipurpose Society founded.</li>
                         <li>2010 – Bellipady Ward created; Mrs. Miliyan Crasta donated 12 cents of land and a house.
                         </li>
                         <li>2018 – Ninnikel Cemetery completed; automatic church bell installed.</li>
-                        <li>2019 – New borewell dug near St. Mary’s English Medium School.</li>
                         <li>2020 – New church building and bell inaugurated on 26th March.</li>
                         <li>2022 – LED façade lights installed on the church.</li>
-                        <li>2023 – Fire & safety system and 25,000-litre underground water tank added.</li>
+                        <li>2023 – 25,000-litre underground water tank added.</li>
                     </ul>
                     <p>
                         Over the years, major renovations and expansions were undertaken in cemeteries, schools,
@@ -221,10 +225,9 @@
                 </div>
             </div>
         </section>
-
+        <div id="footer-container"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script>
         function runLoader() {
             const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
@@ -236,8 +239,6 @@
                     document.querySelector(".loader").remove();
                     document.body.classList.remove("loading");
                 })
-
-                // Curtain reveal effect
                 .to(".curtain.left", { x: "-100%", duration: 1 }, "-=0.2")
                 .to(".curtain.right", { x: "100%", duration: 1 }, "<")
                 .call(() => {
@@ -246,9 +247,7 @@
         }
 
         window.addEventListener("load", runLoader);
-    </script>
 
-    <script>
         // Accordion toggle
         document.querySelectorAll(".collapsible-header").forEach(header => {
             header.addEventListener("click", () => {
@@ -269,6 +268,12 @@
                     window.initNavbar();
                 };
                 document.body.appendChild(script);
+            });
+
+        fetch("component/footer.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("footer-container").innerHTML = html;
             });
     </script>
 

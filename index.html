@@ -56,6 +56,7 @@
 	<link rel="stylesheet" href="Assets/css/navbar.css">
 	<link rel="stylesheet" href="Assets/css/slider.css">
 	<link rel="stylesheet" href="Assets/css/clergy.css">
+	<link rel="stylesheet" href="Assets/css/ward.css">
 	<link rel="stylesheet" href="Assets/css/parallax.css">
 	<link rel="stylesheet" href="Assets/css/liturgical.css">
 	<link rel="stylesheet" href="Assets/css/event.css">
@@ -148,29 +149,36 @@
 		<div id="navbar-container"></div>
 
 		<!-- Image Slider -->
-		<div class="content reveal-bottom">
-			<div class="images">
-				<img src="Assets/images/image1.png">
-				<img src="Assets/images/image2.png">
-				<img src="Assets/images/image3.png">
-				<img src="Assets/images/image4.png">
+		<div class="wrapper" id="wrapper">
+			<!-- Slider container -->
+			<div class="slider">
+				<div class="slide" style="background-image: url('Assets/Images/image1.png');"></div>
+				<div class="slide" style="background-image: url('Assets/Images/image6.jpg');"></div>
+				<div class="slide" style="background-image: url('Assets/Images/image4.png');"></div>
+				<div class="slide" style="background-image: url('Assets/Images/slide4.png');"></div>
 			</div>
 
-			<!-- Static Overlay Text -->
-			<div class="carousel-text">
-				<h1 style="color:#EBCB90">OUR LADY VIRGIN OF THE POOR CHURCH UPPINANGADY</h1>
-				<p>OPP UPPINANGADY GOVT P U COLLAGE</p>
-				<p>UPPINANGADY VILLAGE AND POST PUTTUR TALUK DK-574241</p>
-				<p>CONTACT NO: 8277939419</p>
+
+			<!-- Text on top of the slide -->
+			<div class="text" id="text">
 			</div>
 
-			<!-- Arrows -->
-			<div class="sliders left" onclick="side_slide(-1)">
-				<span class="fas fa-angle-left"></span>
+			<!-- Navigation bar -->
+			<div class="nav" id="nav">
+				<div class="nav-item active" id="navItem0">
+					<div class="nav-bar"></div>
+				</div>
+				<div class="nav-item" id="navItem1">
+					<div class="nav-bar"></div>
+				</div>
+				<div class="nav-item" id="navItem2">
+					<div class="nav-bar"></div>
+				</div>
+				<div class="nav-item" id="navItem3">
+					<div class="nav-bar"></div>
+				</div>
 			</div>
-			<div class="sliders right" onclick="side_slide(1)">
-				<span class="fas fa-angle-right"></span>
-			</div>
+
 		</div>
 
 		<!-- Parish Clergy Section -->
@@ -191,6 +199,7 @@
 						<img src="Assets/images/parish1.png" alt="Fr Avith Pais">
 					</div>
 					<h3>MOST REV.DR PETER PAUL SALDANHA</h3>
+					<p>DIOCESE OF MANGALORE</p>
 				</div>
 
 				<div class="clergy-card">
@@ -203,16 +212,38 @@
 			</div>
 		</section>
 
+		<!-- Wards Section -->
+		<section class="wards-preview" id="wards">
+			<h2 class="wards-title">Parish Wards</h2>
+			<div class="wards-grid reveal-bottom" id="wards-container">
+				<!-- Dynamic Ward Cards will be inserted here -->
+			</div>
+
+			<!-- Load More Button -->
+			<div class="load-more-container">
+				<a href="component/ward.html" class="load-more-btn">Load More</a>
+			</div>
+		</section>
+
+
+
 		<!-- ✅ Parallax About Us Section -->
-		<section class="parallax" id="aboutus">
-			<div class="parallax-content">
-				<h1 class="reveal-top">About Us</h1>
-				<p class="reveal-bottom">Founded in 1928, Our Lady Virgin of the Poor Church has been a symbol of faith,
-					unity,
-					and service for
-					generations.</p>
-				<a href="aboutus.html" class="button reveal-bottom">
-					<span class="text">Know More</span>
+		<section id="aboutus" class="video-section">
+			<video class="background-video" autoplay muted loop playsinline>
+				<source src="Assets/video/church-video.webm" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+
+			<div class="video-overlay"></div>
+
+			<div class="video-content">
+				<h1 class="about-head">About Us</h1>
+				<p class="about-para">
+					Founded in 1928, Our Lady Virgin of the Poor Church has been a symbol of faith,
+					unity, and service for generations.
+				</p>
+				<a href="aboutus.html" class="button">
+					<span class="text-btn">Know More</span>
 					<span class="arrow">
 						<svg class="arrow" viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -223,6 +254,7 @@
 				</a>
 			</div>
 		</section>
+
 
 		<!-- Liturgical Section -->
 		<section class="liturgical-section" id="masstiming">
@@ -284,7 +316,7 @@
 				</div>
 
 				<!-- Event 3 -->
-				<div class="event-card reveal-right">
+				<div class="event-card reveal-bottom">
 					<div class="event-image">
 						<img src="Assets/Images/Events/event3.jpg" alt="KRYC Cross">
 					</div>
@@ -295,6 +327,20 @@
 						<a href="component/event3.html" class="more-btn">Know More</a>
 					</div>
 				</div>
+
+				<!--Event 4-->
+				<div class="event-card reveal-right">
+					<div class="event-image">
+						<img src="Assets/Images/Events/event4-1.jpg" alt="Manikosav Celebration of Fr. Jerald D’Souza">
+					</div>
+					<div class="event-content">
+						<h3>Manikosav Celebration of Fr. Jerald D’Souza</h3>
+						<p>On May 25, 2025, the parish celebrated Rev. Fr. Jerald D’Souza’s Ruby Jubilee with joy and
+							gratitude.</p>
+						<a href="component/event4.html" class="more-btn">Know More</a>
+					</div>
+				</div>
+
 			</div>
 		</section>
 
@@ -303,49 +349,53 @@
 
 	<!-- Loader Script -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script src="Assets/js/wardsData.js"></script>
+	<!-- Loader Script -->
 	<script>
 		function runLoader() {
 			const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
-
-			// Loader logo entrance
 			tl.to(".loader img", { duration: 1, scale: 1, opacity: 1 })
 				.to(".loader", { duration: 0.8, opacity: 0, pointerEvents: "none", delay: 0.5 })
 				.call(() => {
 					document.querySelector(".loader").remove();
 					document.body.classList.remove("loading");
-				})
-
-				// Curtain reveal effect
-				.to(".curtain.left", { x: "-100%", duration: 1 }, "-=0.2")
-				.to(".curtain.right", { x: "100%", duration: 1 }, "<")
-				.call(() => {
-					document.querySelectorAll(".curtain").forEach(el => el.remove());
 				});
 		}
-
 		window.addEventListener("load", runLoader);
-	</script>
 
-	<!-- Load Navbar + Footer -->
-	<script>
 		fetch("component/navbar.html")
 			.then(res => res.text())
 			.then(html => {
 				document.getElementById("navbar-container").innerHTML = html;
-
 				const script = document.createElement("script");
 				script.src = "Assets/js/navbar.js";
-				script.onload = () => {
-					window.initNavbar();
-				};
+				script.onload = () => window.initNavbar && window.initNavbar();
 				document.body.appendChild(script);
 			});
 
 		fetch("component/footer.html")
 			.then(res => res.text())
-			.then(html => {
-				document.getElementById("footer-container").innerHTML = html;
-			});
+			.then(html => document.getElementById("footer-container").innerHTML = html);
+
+		const wardsContainer = document.getElementById("wards-container");
+
+		// Show only first 3 wards on homepage
+		wards.slice(0, 3).forEach(ward => {
+			const card = document.createElement("div");
+			card.classList.add("ward-card");
+			card.innerHTML = `
+      <div class="ward-image">
+        <img src="${ward.image}" alt="${ward.name}">
+      </div>
+      <div class="ward-content">
+        <h3>${ward.name}</h3>
+        <p>${ward.description}</p>
+        <p class="gurkar"><strong>Gurkar:</strong> ${ward.gurkar}</p>
+        <a href="component/wardDetail.html?id=${ward.id}" class="more-btn">Know More</a>
+      </div>
+    `;
+			wardsContainer.appendChild(card);
+		});
 	</script>
 
 	<!-- Other Scripts -->

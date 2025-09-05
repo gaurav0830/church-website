@@ -1,11 +1,12 @@
 /* 🎉 EVENTS PREVIEW PAGE */
 .events-preview {
   background-color: #EBCB90;
-  padding: 60px 40px;
+  padding: 60px 20px;
   margin: 0 auto;
   text-align: center;
 }
 
+/* Section Title */
 .event-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -35,12 +36,16 @@
 
 /* Event Card */
 .event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 420px; /* ✅ Ensures uniform card height */
 }
 
 .event-card:hover {
@@ -48,6 +53,7 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Event Image */
 .event-image {
   height: 200px;
   overflow: hidden;
@@ -64,7 +70,11 @@
   transform: scale(1.1);
 }
 
+/* Event Content */
 .event-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: 20px;
 }
 
@@ -77,12 +87,13 @@
 .event-content p {
   font-size: 1rem;
   color: #555;
+  flex-grow: 1; /* ✅ Ensures button stays at bottom */
 }
 
 /* Button */
 .more-btn {
-  display: inline-block;
   margin-top: 20px;
+  align-self: flex-start;
   padding: 12px 24px;
   background: #004080;
   color: #fff;
@@ -95,9 +106,17 @@
   background: #002850;
 }
 
+/* 🎉 EVENT DETAILS PAGE */
+.event-details {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+}
 
 .event-details h2 {
   font-size: 2rem;
+  margin-top: 40px;  /* ✅ added space at top */
   margin-bottom: 20px;
   color: #004080;
   position: relative;
@@ -112,34 +131,6 @@
   margin: 10px 0;
   border-radius: 2px;
 }
-
-.event-details p {
-  margin-bottom: 15px;
-}
-
-.event-details ul {
-  margin: 15px 0;
-  padding-left: 20px;
-}
-
-.event-details ul li {
-  margin-bottom: 8px;
-}
-/* 🎉 EVENT DETAILS PAGE */
-.event-details {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: left;
-}
-
-.event-details h2 {
-  font-size: 2rem;
-  margin-top: 40px;   /* ✅ added space at top */
-  margin-bottom: 20px;
-  color: #004080;
-}
-
 
 .event-detail-img {
   width: 100%;
@@ -156,4 +147,33 @@
   margin-bottom: 15px;
 }
 
+.event-details ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
 
+.event-details ul li {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .event-title {
+    font-size: 1.8rem;
+  }
+
+  .event-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .event-content p {
+    font-size: 0.95rem;
+  }
+
+  .more-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

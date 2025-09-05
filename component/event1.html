@@ -4,14 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome of the New Parish Priest</title>
+    <link rel="icon" type="image/png" href="../Assets/Images/logo2.png">
+    <title>Welcome of the New Parish Priest-Our Lady Virgin of the Poor Church - Uppinangady</title>
     <link rel="stylesheet" href="../Assets/css/event.css">
     <link rel="stylesheet" href="../Assets/css/navbar.css">
+    <link rel="stylesheet" href="../Assets/css/footer.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
 
     <style>
+        body{
+            background-color: white;
+        }
         /* Loader Overlay */
         .loader {
             position: fixed;
@@ -167,6 +173,7 @@
                 Church, Puttur.
             </p>
         </section>
+        <div id="footer-container"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script>
@@ -204,6 +211,9 @@
                 };
                 document.body.appendChild(script);
             });
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer-container").innerHTML = html);
     </script>
 </body>
 
