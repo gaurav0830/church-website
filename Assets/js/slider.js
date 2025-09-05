@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const slideTexts = [
     `<h1 class="slider-head1">OUR LADY VIRGIN OF THE POOR CHURCH</h1><h2 class="slider-head2">UPPINANGADY</h2><h3 class="slider-head3">OPP UPPINANGADY GOVT P U COLLAGE</h3><h3 class="slider-head3">UPPINANGADY VILLAGE AND POST PUTTUR TALUK DK-574241</h3>`,
     `<h1 class="slider-head1">OUR LADY VIRGIN OF THE POOR CHURCH</h1><h2 class="slider-head2">UPPINANGADY</h2><h3 class="slider-head3">OPP UPPINANGADY GOVT P U COLLAGE</h3><h3 class="slider-head3">UPPINANGADY VILLAGE AND POST PUTTUR TALUK DK-574241</h3>`,
-    `<h1 class="slider-head1">OUR LADY VIRGIN OF THE POOR CHURCH</h1><h2 class="slider-head2">UPPINANGADY</h2><h3 class="slider-head3">OPP UPPINANGADY GOVT P U COLLAGE</h3><h3 class="slider-head3">UPPINANGADY VILLAGE AND POST PUTTUR TALUK DK-574241</h3>`,
     `<h1 class="slider-head1">Church Associations</h1><a href="/component/association.html" class="slide-btn">know more </a>`,
   ];
 

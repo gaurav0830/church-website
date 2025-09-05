@@ -143,6 +143,7 @@
 .nav-bar {
   width: 300px;
   height: 5px;
+  padding-left: 100px;
   background-color: rgba(255, 255, 255, 0.5);
   position: relative;
   overflow: hidden;
@@ -222,6 +223,7 @@
   .nav-bar {
     width: 60px;
     height: 4px;
+    padding: 0;
   }
 
   .nav-item.active .nav-bar {
@@ -247,6 +249,7 @@
 
   .nav-bar {
     width: 50px;
+    padding: 0;
   }
 
   .nav-item.active .nav-bar {
