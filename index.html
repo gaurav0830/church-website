@@ -199,7 +199,7 @@
 						<img src="Assets/images/parish1.png" alt="Fr Avith Pais">
 					</div>
 					<h3>MOST REV.DR PETER PAUL SALDANHA</h3>
-					<p>DIOCESE OF MANGALORE</p>
+					<p>BISHOP-DIOCESE OF MANGALORE</p>
 				</div>
 
 				<div class="clergy-card">
@@ -229,19 +229,28 @@
 
 		<!-- ✅ Parallax About Us Section -->
 		<section id="aboutus" class="video-section">
-			<video class="background-video" autoplay muted loop playsinline>
-				<source src="Assets/video/church-video.webm" type="video/mp4">
+			<video class="background-video" autoplay muted loop playsinline poster="Assets/video/church-poster.jpg">
+
+				<!-- Modern browsers (WebM) -->
+				<source src="Assets/video/church-video.webm" type="video/webm">
+
+				<!-- Fallback for Safari/older browsers -->
+				<source src="Assets/video/church-video.mp4" type="video/mp4">
+
 				Your browser does not support the video tag.
 			</video>
 
+			<!-- Overlay for tint effect -->
 			<div class="video-overlay"></div>
 
+			<!-- Content on top of video -->
 			<div class="video-content">
 				<h1 class="about-head">About Us</h1>
 				<p class="about-para">
 					Founded in 1928, Our Lady Virgin of the Poor Church has been a symbol of faith,
 					unity, and service for generations.
 				</p>
+
 				<a href="aboutus.html" class="button">
 					<span class="text-btn">Know More</span>
 					<span class="arrow">
@@ -254,7 +263,6 @@
 				</a>
 			</div>
 		</section>
-
 
 		<!-- Liturgical Section -->
 		<section class="liturgical-section" id="masstiming">
